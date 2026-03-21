@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twisha Patel | Portfolio</title>
+  <style>
+    html, body { background: #10131a !important; }
+  </style>
+  <!-- Main custom styles FIRST with cache-busting -->
+  <link rel="stylesheet" href="css/style.css?v=20240715">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <!-- Favicon/logo -->
+  <link rel="icon" href="images/logo.png">
+  <!-- FontAwesome (always load last among CSS to avoid conflicts) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Nunito:400,700" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-spinner-outer">
+      <span class="preloader-spinner"></span>
+      <img src="images/logo.png" alt="Twisha Logo" class="preloader-logo-centered">
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md fixed-top r-nav-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="images/logo.png" alt="Logo" class="site-logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span><i class="fas fa-bars hamburger"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <header id="home" class="header-main">
+    <div class="container header-content">
+      <div class="row align-items-center flex-lg-row flex-column-reverse">
+        <!-- Left (Text) -->
+        <div class="col-lg-7 col-md-12 text-center text-lg-left mb-5 mb-lg-0">
+          <h1 class="header-title">
+            Hi, I'm <span class="element highlight-blue"></span>
+          </h1>
+          <div class="header-role mt-3 mb-4">
+            AI/ML Engineer &bull; Deep Learning &bull; LLMs & Automation &bull; MLOps
+          </div>
+          <a href="docs/TwishaPatel_Resume.pdf" class="btn header-btn-pro" download>
+            <span class="btn-icon"><i class="fas fa-arrow-circle-down"></i></span>
+            <span class="btn-text">Download CV</span>
+          </a>
+        </div>  
+        <!-- Right (Image) -->
+        <div class="col-lg-5 col-md-12 text-center">
+          <div class="header-image-card">
+            <img src="images/ai_header_vector.png" alt="AI/ML Illustration" class="header-img-ai img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about r-p section-offset" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+          <img src="images/profile1.png" class="img-fluid img-thumbnail rounded-circle about-img" alt="Twisha Patel">
+        </div>
+        <div class="col-lg-7">
+          <p>
+            I am a dedicated AI/ML Engineer passionate about building impactful solutions using deep learning, computer vision, NLP, and MLOps. I enjoy working on challenging real-world problems—ranging from object detection pipelines to fine-tuning LLMs for business & healthcare domains. I thrive in collaborative teams, believe in lifelong learning, and love turning emerging technologies into practical value.
+          </p>
+          <div class="about-links mt-3">
+            <a href="https://github.com/twishapatel12" class="about-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" class="about-icon" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:twishap534@gmail.com" class="about-icon" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills r-p section-offset" id="skills">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="skills-list">
+            <div class="skill-group">
+              <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+              <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="skill-chip"><i class="fab fa-php"></i> PHP</span>
+              <span class="skill-chip"><i class="fas fa-database"></i> MySQL</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-chip"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="skill-chip"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+              <span class="skill-chip"><i class="fab fa-github"></i> Git & GitHub</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-chip"><i class="fas fa-brain"></i> TensorFlow</span>
+              <span class="skill-chip"><i class="fas fa-brain"></i> PyTorch</span>
+              <span class="skill-chip"><i class="fas fa-eye"></i> OpenCV</span>
+              <span class="skill-chip"><i class="fas fa-robot"></i> Hugging Face</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-chip"><i class="fas fa-language"></i> NLP</span>
+              <span class="skill-chip"><i class="fas fa-image"></i> Computer Vision</span>
+              <span class="skill-chip"><i class="fas fa-code"></i> FastAPI</span>
+              <span class="skill-chip"><i class="fab fa-docker"></i> Docker</span>
+              <span class="skill-chip"><i class="fas fa-sync"></i> CI/CD</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-chip"><i class="fas fa-cogs"></i> LLMs</span>
+              <span class="skill-chip"><i class="fas fa-magic"></i> Prompt Engineering</span>
+              <span class="skill-chip"><i class="fas fa-chart-line"></i> Model Deployment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education bg-sec r-p section-offset" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="row justify-content-center">
+
+        <!-- Advanced PG – IIT Madras -->
+        <div class="col-md-4 col-12 mb-4 d-flex">
+          <div class="card shadow-sm edu-card flex-fill">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">
+                  <i class="fas fa-brain mr-2"></i>
+                  Advanced Post Graduate
+                </h5>
+                <div class="education-border mb-2"></div>
+                <div class="text-muted mb-1">
+                  Agentic AI Workflows & Agentic System Development
+                </div>
+                <div class="text-muted mb-1">
+                  Indian Institute of Technology, Madras
+                </div>
+                <div>Dec 2025 – Jun 2026</div>
+              </div>
+              <div>
+                <span class="badge badge-pill badge-warning">Ongoing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BTech -->
+        <div class="col-md-4 col-12 mb-4 d-flex">
+          <div class="card shadow-sm edu-card flex-fill">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">
+                  <i class="fas fa-university mr-2"></i>
+                  Bachelor's Of Technology
+                </h5>
+                <div class="education-border mb-2"></div>
+                <div class="text-muted mb-1">
+                  Computer Science Engineering
+                </div>
+                <div class="text-muted mb-1">
+                  ITM (SLS) Baroda University
+                </div>
+                <div class="mb-1">Aug 2021 – May 2025</div>
+              </div>
+              <div>
+                <span class="badge badge-pill badge-info">CGPA: 8.6</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSC -->
+        <div class="col-md-4 col-12 mb-4 d-flex">
+          <div class="card shadow-sm edu-card flex-fill">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h6 class="card-title">
+                  <i class="fas fa-school mr-2"></i>
+                  Higher Secondary School
+                </h6>
+                <div class="education-border mb-2"></div>
+                <div class="text-muted mb-1">
+                  Class XII
+                </div>
+                <div class="text-muted mb-1">
+                  Shri J.R. Shah Bright Eng. Medium School
+                </div>
+                <div>2020 – 2021</div>
+              </div>
+              <div>
+                <span class="badge badge-pill badge-info">Grade: B2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary -->
+        <div class="col-md-4 col-12 mb-4 d-flex">
+          <div class="card shadow-sm edu-card flex-fill">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h6 class="card-title">
+                  <i class="fas fa-building mr-2"></i>
+                  Secondary School
+                </h6>
+                <div class="education-border mb-2"></div>
+                <div class="text-muted mb-1">Class X</div>
+                <div class="text-muted mb-1">Bright Day School</div>
+                <div>2019 – 2020</div>
+              </div>
+              <div>
+                <span class="badge badge-pill badge-info">Grade: B1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience r-p section-offset" id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="exp-timeline">
+        <!-- Sundaram Technologies Experience - most recent -->
+        <div class="exp-timeline-item">
+          <div class="exp-timeline-dot"></div>
+          <div class="exp-timeline-content card shadow-sm">
+            <div class="exp-row">
+              <div class="exp-company-logo">
+                <img src="images/st_logo.png" alt="Sundaram Technologies" />
+              </div>
+              <div class="exp-details">
+                <div class="exp-title-row">
+                  <span class="exp-role">Associate AI/ML Engineer</span>
+                  <span class="exp-company">@ Sundaram Technologies</span>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date"><i class="far fa-calendar-alt"></i> Jul 2025 – Present</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Vadodara</span>
+                </div>
+                <ul class="exp-list">
+                  <li>Working on object detection and computer vision projects for industrial automation.</li>
+                  <li>Developing Python-based ML and deep learning solutions for image/video analysis.</li>
+                  <li>Responsible for data analysis, preprocessing, and model evaluation to enhance detection accuracy.</li>
+                  <li>Leveraging frameworks such as TensorFlow, OpenCV, and PyTorch for real-world vision applications.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Artem HealthTech Experience -->
+        <div class="exp-timeline-item">
+          <div class="exp-timeline-dot"></div>
+          <div class="exp-timeline-content card shadow-sm">
+            <div class="exp-row">
+              <div class="exp-company-logo">
+                <img src="images/artem_logo.jpg" alt="Artem HealthTech" />
+              </div>
+              <div class="exp-details">
+                <div class="exp-title-row">
+                  <span class="exp-role">AI/ML Intern</span>
+                  <span class="exp-company">@ Artem HealthTech</span>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date"><i class="far fa-calendar-alt"></i> Jan 2025 – Jul 2025</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Ahmedabad</span>
+                </div>
+                <ul class="exp-list">
+                  <li>Built machine data integration solutions for the healthcare platform (automation & data flow).</li>
+                  <li>Deployed real-time object detection using MMDetection's pre-trained model on live webcam feeds.</li>
+                  <li>Developed agentic speech-to-text pipelines using open source models.</li>
+                  <li>Fine-tuned finance-specific LLM (Flan-T5), optimized prompts for domain accuracy.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="work r-p" id="work">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2 class="section-title">Python & AI/ML Projects</h2>
+          <p class="section-desc">Real-world AI, ML & Automation: What I've Built</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Project: Open Source Contribution – LlamaIndex -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-code-branch text-dark"></i> Open Source Contribution – LlamaIndex
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-dark">Open Source</span>
+                <span class="badge badge-pill badge-secondary">2026</span>
+              </p>
+              <ul>
+                <li>Contributed a <b>FastAPI-based Retrieval-Augmented Generation (RAG)</b> example using <b>LlamaIndex</b> with fully local <b>Ollama LLMs</b>.</li>
+                <li>Implemented document ingestion, vector indexing, and query APIs enabling <b>offline, no-API-key</b> RAG workflows.</li>
+                <li>Collaborated with maintainers to address architecture, formatting, and CI feedback; contribution <b>merged into main repository</b>.</li>
+              </ul>
+              <div class="small text-muted">
+                Tech: Python, LlamaIndex, FastAPI, Ollama, Local LLMs, RAG
+              </div>
+              <a href="https://github.com/run-llama/llama_index" class="btn btn-sm btn-outline-dark mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Pneumonia Detector AI -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-x-ray text-danger"></i> Pneumonia Detector AI
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-danger">Medical Imaging</span>
+                <span class="badge badge-pill badge-secondary">2025</span>
+              </p>
+              <ul>
+                <li>Developed an explainable medical AI web app for automated pneumonia detection on chest X-rays, leveraging <b>EfficientNet and GradCAM</b> for visual model transparency and user trust.
+                <li>Implemented a human-in-the-loop feedback and retraining pipeline with batch processing, quality assurance, and full <b>Dockerization</b> for reproducible deployment in clinical or research environments.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, PyTorch, EfficientNet, Streamlit, GradCAM, Docker</div>
+              <a href="https://github.com/twishapatel12/Pneumonia-Detector-AI" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: AutoML Pipeline Service -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-robot text-info"></i> AutoML Pipeline Service
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-info">AI Automation</span>
+                <span class="badge badge-pill badge-secondary">2025</span>
+              </p>
+              <ul>
+                <li>Designed an end-to-end pipeline using <b>Streamlit & FastAPI</b> for dynamic model training, inference, and benchmarking.</li>
+                <li>Automated dataset profiling, model selection, versioning, and performance logging.</li>
+                <li>Web interface for configuration, easy deployment & result visualization.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, Streamlit, FastAPI, scikit-learn, Docker</div>
+              <a href="https://github.com/twishapatel12/AutoML-Pipeline" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project: Object Detection with MMDetection RTMDet-tiny -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-eye text-warning"></i> Object Detection
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-warning">Computer Vision</span>
+                <span class="badge badge-pill badge-secondary">2025</span>
+              </p>
+              <ul>
+                <li>Implemented real-time object detection with <b>MMDetection & OpenCV</b> on live webcam feeds.</li>
+                <li>Displayed bounding boxes & class labels with <b>pretrained COCO weights</b>.</li>
+                <li>Hands-on with MMDetection API, model inference & live result rendering.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, MMDetection, OpenCV</div>
+              <a href="https://github.com/twishapatel12/ObjectDetection-RTMDet-tiny" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project: Traffic Sign Recognition -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-traffic-light text-success"></i> Traffic Sign Recognition
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-success">Deep Learning</span>
+                <span class="badge badge-pill badge-secondary">2023</span>
+              </p>
+              <ul>
+                <li>Developed a <b>CNN model</b> to classify German traffic signs with high accuracy.</li>
+                <li>Advanced preprocessing & augmentation with OpenCV for model robustness.</li>
+                <li>Built with TensorFlow & Keras, leveraging GTSRB dataset.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, TensorFlow, OpenCV, Keras</div>
+              <a href="https://github.com/twishapatel12/TrafficSignRecognition" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project: Finance-based Small LLM -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-coins text-primary"></i> Finance-based Small LLM
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-primary">NLP/LLMs</span>
+                <span class="badge badge-pill badge-secondary">2025</span>
+              </p>
+              <ul>
+                <li>Fine-tuned <b>Flan-T5</b> LLM on curated financial Q&A datasets.</li>
+                <li>Optimized prompt engineering for precision & contextual relevance.</li>
+                <li>Deployed model for domain-specific finance Q&A.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, Hugging Face, Flan-T5, Transformers</div>
+              <a href="https://github.com/twishapatel12/Finance-LLM" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project: Voice Assistant -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-2">
+                <i class="fas fa-microphone text-danger"></i> Voice Assistant
+              </h4>
+              <p class="mb-1">
+                <span class="badge badge-pill badge-danger">Speech AI</span>
+                <span class="badge badge-pill badge-secondary">2023</span>
+              </p>
+              <ul>
+                <li>Developed a desktop voice assistant in Python for reminders, music, web search & more.</li>
+                <li>Integrated speech recognition and TTS for seamless two-way interaction.</li>
+                <li>Enhanced natural language understanding for smarter commands.</li>
+              </ul>
+              <div class="small text-muted">Tech: Python, SpeechRecognition, pyttsx3</div>
+              <a href="https://github.com/twishapatel12/VoiceAssistant" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact r-p section-offset" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-desc">Interested in working together or just want to connect? Reach out anytime.</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="contact-card shadow-sm">
+            <div class="contact-icon-box"><i class="fa fa-phone"></i></div>
+            <div class="contact-label">Phone</div>
+            <a href="tel:+918160893358" class="contact-link">+91 8160893358</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="contact-card shadow-sm">
+            <div class="contact-icon-box"><i class="far fa-envelope"></i></div>
+            <div class="contact-label">Email</div>
+            <a href="mailto:twishap534@gmail.com" class="contact-link">twishap534@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="contact-card shadow-sm">
+            <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-label">Location</div>
+            <span class="contact-link">Ahmedabad, Gujarat, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-social mt-4 text-center">
+        <a href="https://github.com/twishapatel12" class="contact-social-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" class="contact-social-icon" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:twishap534@gmail.com" class="contact-social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <div class="footer-name mb-2">Twisha Patel</div>
+      <div class="footer-role mb-1">AI/ML Engineer &mdash; Portfolio</div>
+      <div class="footer-motto mb-2">"Building intelligent solutions, one model at a time."</div>
+      <div class="footer-text">
+        &copy; <span id="footer-year"></span> Twisha Patel
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var preloader = document.getElementById('preloader');
+      if(preloader) preloader.classList.add('hide');
+    }, 400);
+  });
+</script>
+
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/typed.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
