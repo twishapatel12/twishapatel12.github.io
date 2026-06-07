@@ -1,560 +1,977 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twisha Patel | Portfolio</title>
-  <style>
-    html, body { background: #10131a !important; }
-  </style>
-  <!-- Main custom styles FIRST with cache-busting -->
-  <link rel="stylesheet" href="css/style.css?v=20240715">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  <!-- Favicon/logo -->
-  <link rel="icon" href="images/logo.png">
-  <!-- FontAwesome (always load last among CSS to avoid conflicts) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Nunito:400,700" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <title>Twisha Patel | Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in healthcare technology, AI systems, data analytics, and scalable web applications." />
+  <meta name="author" content="Twisha Patel" />
+  <meta name="keywords" content="Twisha Patel, Software Engineer, AI/ML, Healthcare Technology, Data Analytics, FastAPI, PostgreSQL, Apache Superset, Python, LLMs" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Twisha Patel | Software Engineer" />
+  <meta property="og:description" content="Software Engineer specializing in healthcare technology, AI systems, data analytics, and scalable web applications." />
+  <meta property="og:url" content="https://twishapatel12.github.io/" />
+  <meta property="og:image" content="https://twishapatel12.github.io/images/banner.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Twisha Patel | Software Engineer" />
+  <meta name="twitter:description" content="Software Engineer specializing in healthcare technology, AI systems, data analytics, and scalable web applications." />
+
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="canonical" href="https://twishapatel12.github.io/" />
+
+  <!-- Fonts: Cabinet Grotesk (display) + Inter (body) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Twisha Patel",
+    "jobTitle": "Software Engineer",
+    "url": "https://twishapatel12.github.io/",
+    "email": "mailto:twishap534@gmail.com",
+    "sameAs": [
+      "https://github.com/twishapatel12",
+      "https://www.linkedin.com/in/twisha-patel-253bbb229/"
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology, Madras" },
+      { "@type": "CollegeOrUniversity", "name": "ITM (SLS) Baroda University" }
+    ]
+  }
+  </script>
 </head>
 <body>
-  
+
   <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-spinner-outer">
-      <span class="preloader-spinner"></span>
-      <img src="images/logo.png" alt="Twisha Logo" class="preloader-logo-centered">
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="images/logo.png" alt="" class="preloader-logo" />
+      <div class="preloader-text">Converting caffeine into software...</div>
     </div>
   </div>
 
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-md fixed-top r-nav-custom">
-    <div class="container">
-      <a class="navbar-brand" href="#home">
-        <img src="images/logo.png" alt="Logo" class="site-logo-img" />
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Twisha Patel home">
+        <img src="images/logo.png" alt="Twisha Patel" class="nav-brand-logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span><i class="fas fa-bars hamburger"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#about" data-nav>About</a></li>
+        <li><a class="nav-link" href="#experience" data-nav>Experience</a></li>
+        <li><a class="nav-link" href="#work" data-nav>Projects</a></li>
+        <li><a class="nav-link" href="#skills" data-nav>Skills</a></li>
+        <li><a class="nav-link" href="#education" data-nav>Education</a></li>
+        <li><a class="nav-link" href="#contact" data-nav>Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-icon" id="cmdkTrigger" aria-label="Open command palette" title="Command palette (⌘K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <button class="btn-icon nav-mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- header -->
-  <header id="home" class="header-main">
-    <div class="container header-content">
-      <div class="row align-items-center flex-lg-row flex-column-reverse">
-        <!-- Left (Text) -->
-        <div class="col-lg-7 col-md-12 text-center text-lg-left mb-5 mb-lg-0">
-          <h1 class="header-title">
-            Hi, I'm <span class="element highlight-blue"></span>
+  <!-- Mobile menu backdrop -->
+  <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+
+  <!-- Mobile menu -->
+  <aside class="mobile-drawer" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <a href="#about" data-nav>About</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#work" data-nav>Projects</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#education" data-nav>Education</a>
+      <a href="#contact" data-nav>Contact</a>
+      <div class="mobile-drawer-footer">
+        <a href="https://github.com/twishapatel12" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:twishap534@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            <span>Available for new opportunities · 2026</span>
+          </div>
+          <h1 class="name-hero" aria-label="Twisha Patel">
+            <span class="name-row">
+              <span class="name-line name-first" data-name-split>Twisha</span><span class="name-line name-first">Patel</span>
+            </span>
+            <span class="name-rule" aria-hidden="true"></span>
           </h1>
-          <div class="header-role mt-3 mb-4">
-            AI/ML Engineer &bull; Deep Learning &bull; LLMs & Automation &bull; MLOps
-          </div>
-          <a href="docs/TwishaPatel_Resume.pdf" class="btn header-btn-pro" download>
-            <span class="btn-icon"><i class="fas fa-arrow-circle-down"></i></span>
-            <span class="btn-text">Download CV</span>
-          </a>
-        </div>  
-        <!-- Right (Image) -->
-        <div class="col-lg-5 col-md-12 text-center">
-          <div class="header-image-card">
-            <img src="images/ai_header_vector.png" alt="AI/ML Illustration" class="header-img-ai img-fluid" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section class="about r-p section-offset" id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="row align-items-center mt-4">
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
-          <img src="images/profile1.png" class="img-fluid img-thumbnail rounded-circle about-img" alt="Twisha Patel">
-        </div>
-        <div class="col-lg-7">
-          <p>
-            I am a dedicated AI/ML Engineer passionate about building impactful solutions using deep learning, computer vision, NLP, and MLOps. I enjoy working on challenging real-world problems—ranging from object detection pipelines to fine-tuning LLMs for business & healthcare domains. I thrive in collaborative teams, believe in lifelong learning, and love turning emerging technologies into practical value.
+          <div class="hero-role">AI/ML Engineer · Software Engineer · LLM Systems</div>
+          <p class="hero-tagline">
+            I build scalable software systems, healthcare technology solutions, AI-powered applications, and data-driven platforms that transform complex workflows into intuitive user experiences.
           </p>
-          <div class="about-links mt-3">
-            <a href="https://github.com/twishapatel12" class="about-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" class="about-icon" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:twishap534@gmail.com" class="about-icon" title="Email"><i class="fas fa-envelope"></i></a>
+          <div class="hero-ctas">
+            <a href="#work" class="btn btn-primary magnetic">
+              <span>View Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="docs/TwishaPatel_Resume.pdf" class="btn btn-secondary magnetic" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost magnetic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              <span>Contact</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <div class="hero-meta-num" data-count="7">0</div>
+              <div class="hero-meta-label">Projects Shipped</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-num" data-count="2">0</div>
+              <div class="hero-meta-label">Years Experience</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-num" data-count="1">0</div>
+              <div class="hero-meta-label">Open-Source PR Merged</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-num" data-count="8.6" data-suffix="">0</div>
+              <div class="hero-meta-label">BTech CGPA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-head">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <div class="code-title">twisha.py — engineer</div>
+              <div class="code-head-spacer"></div>
+            </div>
+            <div class="code-body">
+              <div class="code-line"><span class="code-line-num">1</span><span><span class="tk-key">class</span> <span class="tk-ty">Engineer</span>:</span></div>
+              <div class="code-line"><span class="code-line-num">2</span><span>    <span class="tk-key">def</span> <span class="tk-fn">__init__</span>(<span class="tk-var">self</span>):</span></div>
+              <div class="code-line"><span class="code-line-num">3</span><span>        <span class="tk-var">self</span>.name = <span class="tk-str">"Twisha Patel"</span></span></div>
+              <div class="code-line"><span class="code-line-num">4</span><span>        <span class="tk-var">self</span>.role = <span class="tk-str">"AI/ML Engineer"</span></span></div>
+              <div class="code-line"><span class="code-line-num">5</span><span>        <span class="tk-var">self</span>.stack = [<span class="tk-str">"PyTorch"</span>, <span class="tk-str">"LLMs"</span>,</span></div>
+              <div class="code-line"><span class="code-line-num">6</span><span>                     <span class="tk-str">"FastAPI"</span>, <span class="tk-str">"Docker"</span>]</span></div>
+              <div class="code-line"><span class="code-line-num">7</span><span>&nbsp;</span></div>
+              <div class="code-line"><span class="code-line-num">8</span><span>    <span class="tk-key">def</span> <span class="tk-fn">build</span>(<span class="tk-var">self</span>, idea):</span></div>
+              <div class="code-line"><span class="code-line-num">9</span><span>        <span class="tk-com"># research → model → ship</span></span></div>
+              <div class="code-line"><span class="code-line-num">10</span><span>        <span class="tk-key">return</span> <span class="tk-ty">Product</span>(idea).<span class="tk-fn">deploy</span>()</span></div>
+              <div class="code-line"><span class="code-line-num">11</span><span>&nbsp;</span></div>
+              <div class="code-line"><span class="code-line-num">12</span><span><span class="tk-ty">Engineer</span>().<span class="tk-fn">build</span>(<span class="tk-str">"your idea"</span>)<span class="cursor-blink"></span></span></div>
+            </div>
+          </div>
+
+          <div class="hero-float hero-float-1">
+            <span class="hero-float-icon blue">AI</span>
+            <span>LLMs · RAG</span>
+          </div>
+          <div class="hero-float hero-float-2">
+            <span class="hero-float-icon violet">ML</span>
+            <span>PyTorch · TF</span>
+          </div>
+          <div class="hero-float hero-float-3">
+            <span class="hero-float-icon cyan">FS</span>
+            <span>FastAPI · Docker</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="skills r-p section-offset" id="skills">
+  <!-- TECH MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="marquee-item-dot"></span>PyTorch</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>TensorFlow</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Transformers</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>LangChain</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>LlamaIndex</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>FastAPI</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Docker</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Python</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>JavaScript</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>TypeScript</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>React</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Node.js</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>OpenCV</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Hugging Face</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>MySQL</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>MMDetection</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item"><span class="marquee-item-dot"></span>PyTorch</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>TensorFlow</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Transformers</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>LangChain</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>LlamaIndex</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>FastAPI</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Docker</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Python</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>JavaScript</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>TypeScript</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>React</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Node.js</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>OpenCV</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>Hugging Face</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>MySQL</span>
+      <span class="marquee-item"><span class="marquee-item-dot"></span>MMDetection</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
     <div class="container">
-      <h2 class="section-title">My Skills</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="skills-list">
-            <div class="skill-group">
-              <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
-              <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
-              <span class="skill-chip"><i class="fab fa-php"></i> PHP</span>
-              <span class="skill-chip"><i class="fas fa-database"></i> MySQL</span>
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>About</span>
+        <h2 class="h-1">Software Engineer at the intersection of <span class="accent-text">healthcare</span>, <span class="accent-text">AI</span>, and <span class="accent-text">data</span>.</h2>
+        <p>I build the systems that ship — not just the models that demo.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <p>
+            I'm a <strong>Software Engineer</strong> building production systems at the intersection of AI, healthcare technology, and data engineering. As a Software Engineer at <strong>Artem HealthTech</strong>, I ship the integration software, clinical data pipelines, and Apache Superset dashboards that turn fragmented healthcare data into decisions clinicians and operators can act on. Earlier at <strong>Sundaram Technologies</strong>, I owned ML systems end-to-end — from computer vision pipelines for industrial inspection to FastAPI services engineered to survive real production traffic.
+          </p>
+          <p>
+            My focus is the engineering work that decides whether AI actually works in production: <strong>reproducible training, evaluation harnesses, latency budgets, and observability</strong>. The model is rarely the bottleneck — the system around it is. I'm currently sharpening that craft through an <strong>Advanced Post Graduate in Agentic AI Workflows at IIT Madras</strong>, turning research-grade ideas into dependable, production-ready software.
+          </p>
+        </div>
+
+        <div>
+          <div class="about-highlights stagger">
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="highlight-title">System Design</div>
+              <div class="highlight-desc">Scalable FastAPI services, REST APIs, data pipelines.</div>
             </div>
-            <div class="skill-group">
-              <span class="skill-chip"><i class="fab fa-html5"></i> HTML5</span>
-              <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
-              <span class="skill-chip"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-              <span class="skill-chip"><i class="fab fa-github"></i> Git & GitHub</span>
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div class="highlight-title">Healthcare Tech</div>
+              <div class="highlight-desc">Lab integration, HMIS reporting, clinical data exchange.</div>
             </div>
-            <div class="skill-group">
-              <span class="skill-chip"><i class="fas fa-brain"></i> TensorFlow</span>
-              <span class="skill-chip"><i class="fas fa-brain"></i> PyTorch</span>
-              <span class="skill-chip"><i class="fas fa-eye"></i> OpenCV</span>
-              <span class="skill-chip"><i class="fas fa-robot"></i> Hugging Face</span>
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <div class="highlight-title">Data &amp; Analytics</div>
+              <div class="highlight-desc">Apache Superset dashboards, BI, reporting on real datasets.</div>
             </div>
-            <div class="skill-group">
-              <span class="skill-chip"><i class="fas fa-language"></i> NLP</span>
-              <span class="skill-chip"><i class="fas fa-image"></i> Computer Vision</span>
-              <span class="skill-chip"><i class="fas fa-code"></i> FastAPI</span>
-              <span class="skill-chip"><i class="fab fa-docker"></i> Docker</span>
-              <span class="skill-chip"><i class="fas fa-sync"></i> CI/CD</span>
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="highlight-title">AI / ML Systems</div>
+              <div class="highlight-desc">LLM fine-tuning, RAG, computer vision, ML lifecycle.</div>
             </div>
-            <div class="skill-group">
-              <span class="skill-chip"><i class="fas fa-cogs"></i> LLMs</span>
-              <span class="skill-chip"><i class="fas fa-magic"></i> Prompt Engineering</span>
-              <span class="skill-chip"><i class="fas fa-chart-line"></i> Model Deployment</span>
-            </div>
+          </div>
+
+          <div class="about-quote reveal">
+            "The model is rarely the bottleneck — the system around it is."
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section class="education bg-sec r-p section-offset" id="education">
+  <!-- EXPERIENCE -->
+  <section id="experience">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="row justify-content-center">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Experience</span>
+        <h2 class="h-1">Where I've shipped.</h2>
+        <p>Two years building production software across AI/ML, healthcare technology, and data platforms.</p>
+      </div>
 
-        <!-- Advanced PG – IIT Madras -->
-        <div class="col-md-4 col-12 mb-4 d-flex">
-          <div class="card shadow-sm edu-card flex-fill">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="card-title">
-                  <i class="fas fa-brain mr-2"></i>
-                  Advanced Post Graduate
-                </h5>
-                <div class="education-border mb-2"></div>
-                <div class="text-muted mb-1">
-                  Agentic AI Workflows & Agentic System Development
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div class="tl-logo"><img src="images/artem_logo.jpg" alt="Artem HealthTech" loading="lazy" /></div>
+              <div class="tl-info">
+                <div class="tl-role">Software Engineer</div>
+                <div class="tl-company"><strong>Artem HealthTech</strong> · Ahmedabad, India</div>
+                <div class="tl-meta">
+                  <span>📅 Apr 2026 – Present</span>
+                  <span>📍 On-Site</span>
                 </div>
-                <div class="text-muted mb-1">
-                  Indian Institute of Technology, Madras
-                </div>
-                <div>Dec 2025 – Jun 2026</div>
               </div>
-              <div>
-                <span class="badge badge-pill badge-warning">Ongoing</span>
-              </div>
+              <span class="tl-tag">Current</span>
+            </div>
+            <p class="tl-summary">
+              Working on healthcare technology solutions focused on interoperability, data integration, and analytics.
+            </p>
+            <ul class="tl-achievements">
+              <li>Developing <strong>Lab Integration Software</strong> for healthcare systems — connecting laboratory systems to clinical applications.</li>
+              <li>Building and maintaining <strong>interfaces between laboratory systems and healthcare applications</strong> using REST APIs.</li>
+              <li>Improving <strong>healthcare data exchange and workflow automation</strong> across clinical and operational pipelines.</li>
+              <li>Working with <strong>clinical and operational data pipelines</strong> — ingestion, validation, transformation, and delivery.</li>
+              <li>Developing <strong>analytics and reporting solutions</strong> with <strong>Apache Superset</strong> for dashboards and insights.</li>
+              <li>Supporting <strong>HMIS Portal reporting and decision-making</strong> through clear, actionable data visualization.</li>
+              <li>Collaborating with product, healthcare, and engineering teams to deliver <strong>scalable, production-grade solutions</strong>.</li>
+            </ul>
+            <div class="project-stack project-stack--top">
+              <span class="stack-pill">Python</span>
+              <span class="stack-pill accent">FastAPI</span>
+              <span class="stack-pill">PostgreSQL</span>
+              <span class="stack-pill">Apache Superset</span>
+              <span class="stack-pill">Docker</span>
+              <span class="stack-pill">REST APIs</span>
+              <span class="stack-pill">Healthcare Integrations</span>
+              <span class="stack-pill">Data Analytics</span>
             </div>
           </div>
         </div>
 
-        <!-- BTech -->
-        <div class="col-md-4 col-12 mb-4 d-flex">
-          <div class="card shadow-sm edu-card flex-fill">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="card-title">
-                  <i class="fas fa-university mr-2"></i>
-                  Bachelor's Of Technology
-                </h5>
-                <div class="education-border mb-2"></div>
-                <div class="text-muted mb-1">
-                  Computer Science Engineering
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div class="tl-logo"><img src="images/st_logo.png" alt="Sundaram Technologies" loading="lazy" /></div>
+              <div class="tl-info">
+                <div class="tl-role">Associate AI/ML Engineer</div>
+                <div class="tl-company"><strong>Sundaram Technologies</strong> · Vadodara, India</div>
+                <div class="tl-meta">
+                  <span>📅 Jul 2025 – March 2026</span>
+                  <span>📍 On-Site</span>
                 </div>
-                <div class="text-muted mb-1">
-                  ITM (SLS) Baroda University
-                </div>
-                <div class="mb-1">Aug 2021 – May 2025</div>
               </div>
-              <div>
-                <span class="badge badge-pill badge-info">CGPA: 8.6</span>
-              </div>
+              <span class="tl-tag">Industrial Automation</span>
             </div>
+            <ul class="tl-achievements">
+              <li>Architecting <strong>object detection and computer vision pipelines</strong> for industrial automation, replacing manual inspection workflows.</li>
+              <li>Building <strong>Python-based deep learning systems</strong> for image and video analysis on TensorFlow, PyTorch, and OpenCV.</li>
+              <li>Owning the full ML lifecycle — <strong>data preprocessing, model evaluation, deployment</strong> — to push detection accuracy on production data.</li>
+              <li>Partnering with product and ops to ship CV features that <strong>engineers can debug and operators can trust</strong>.</li>
+            </ul>
           </div>
         </div>
 
-        <!-- HSC -->
-        <div class="col-md-4 col-12 mb-4 d-flex">
-          <div class="card shadow-sm edu-card flex-fill">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <h6 class="card-title">
-                  <i class="fas fa-school mr-2"></i>
-                  Higher Secondary School
-                </h6>
-                <div class="education-border mb-2"></div>
-                <div class="text-muted mb-1">
-                  Class XII
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div class="tl-logo"><img src="images/artem_logo.jpg" alt="Artem HealthTech" loading="lazy" /></div>
+              <div class="tl-info">
+                <div class="tl-role">AI/ML Intern</div>
+                <div class="tl-company"><strong>Artem HealthTech</strong> · Ahmedabad, India</div>
+                <div class="tl-meta">
+                  <span>📅 Jan 2025 – Jul 2025</span>
+                  <span>📍 On-Site</span>
                 </div>
-                <div class="text-muted mb-1">
-                  Shri J.R. Shah Bright Eng. Medium School
-                </div>
-                <div>2020 – 2021</div>
               </div>
-              <div>
-                <span class="badge badge-pill badge-info">Grade: B2</span>
-              </div>
+              <span class="tl-tag">Healthcare AI</span>
             </div>
+            <ul class="tl-achievements">
+              <li>Built <strong>machine data integration</strong> solutions powering a healthcare platform's automation and patient-data flow.</li>
+              <li>Deployed <strong>real-time object detection</strong> using MMDetection's pre-trained COCO weights on live webcam feeds.</li>
+              <li>Developed <strong>agentic speech-to-text pipelines</strong> using open-source ASR models with multi-step reasoning.</li>
+              <li><strong>Fine-tuned Flan-T5</strong> on financial Q&A corpora, lifting domain accuracy through systematic prompt optimization.</li>
+            </ul>
           </div>
         </div>
-
-        <!-- Secondary -->
-        <div class="col-md-4 col-12 mb-4 d-flex">
-          <div class="card shadow-sm edu-card flex-fill">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <h6 class="card-title">
-                  <i class="fas fa-building mr-2"></i>
-                  Secondary School
-                </h6>
-                <div class="education-border mb-2"></div>
-                <div class="text-muted mb-1">Class X</div>
-                <div class="text-muted mb-1">Bright Day School</div>
-                <div>2019 – 2020</div>
-              </div>
-              <div>
-                <span class="badge badge-pill badge-info">Grade: B1</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="experience r-p section-offset" id="experience">
+  <!-- PROJECTS -->
+  <section id="work">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="exp-timeline">
-        <!-- Sundaram Technologies Experience - most recent -->
-        <div class="exp-timeline-item">
-          <div class="exp-timeline-dot"></div>
-          <div class="exp-timeline-content card shadow-sm">
-            <div class="exp-row">
-              <div class="exp-company-logo">
-                <img src="images/st_logo.png" alt="Sundaram Technologies" />
-              </div>
-              <div class="exp-details">
-                <div class="exp-title-row">
-                  <span class="exp-role">Associate AI/ML Engineer</span>
-                  <span class="exp-company">@ Sundaram Technologies</span>
-                </div>
-                <div class="exp-meta">
-                  <span class="exp-date"><i class="far fa-calendar-alt"></i> Jul 2025 – Present</span>
-                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Vadodara</span>
-                </div>
-                <ul class="exp-list">
-                  <li>Working on object detection and computer vision projects for industrial automation.</li>
-                  <li>Developing Python-based ML and deep learning solutions for image/video analysis.</li>
-                  <li>Responsible for data analysis, preprocessing, and model evaluation to enhance detection accuracy.</li>
-                  <li>Leveraging frameworks such as TensorFlow, OpenCV, and PyTorch for real-world vision applications.</li>
-                </ul>
-              </div>
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Featured Work</span>
+        <h2 class="h-1">AI products and platforms.</h2>
+        <p>End-to-end case studies — from problem framing to deployed systems.</p>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All · 7</button>
+        <button class="filter-btn" data-filter="llm">LLMs & RAG</button>
+        <button class="filter-btn" data-filter="vision">Computer Vision</button>
+        <button class="filter-btn" data-filter="platform">Platform & Tools</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card featured reveal" data-cat="llm">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
+            <span class="project-year">2026</span>
           </div>
-        </div>
-        <!-- Artem HealthTech Experience -->
-        <div class="exp-timeline-item">
-          <div class="exp-timeline-dot"></div>
-          <div class="exp-timeline-content card shadow-sm">
-            <div class="exp-row">
-              <div class="exp-company-logo">
-                <img src="images/artem_logo.jpg" alt="Artem HealthTech" />
-              </div>
-              <div class="exp-details">
-                <div class="exp-title-row">
-                  <span class="exp-role">AI/ML Intern</span>
-                  <span class="exp-company">@ Artem HealthTech</span>
-                </div>
-                <div class="exp-meta">
-                  <span class="exp-date"><i class="far fa-calendar-alt"></i> Jan 2025 – Jul 2025</span>
-                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Ahmedabad</span>
-                </div>
-                <ul class="exp-list">
-                  <li>Built machine data integration solutions for the healthcare platform (automation & data flow).</li>
-                  <li>Deployed real-time object detection using MMDetection's pre-trained model on live webcam feeds.</li>
-                  <li>Developed agentic speech-to-text pipelines using open source models.</li>
-                  <li>Fine-tuned finance-specific LLM (Flan-T5), optimized prompts for domain accuracy.</li>
-                </ul>
-              </div>
+          <h3 class="project-title">Open-Source Contribution to LlamaIndex</h3>
+          <p class="project-desc">Shipped a <strong>FastAPI-based RAG example</strong> to a major LLM framework — merged into main after maintainer review.</p>
+          <ul class="project-features">
+            <li><strong>Challenge:</strong> Lower the barrier to running private, offline RAG without API keys.</li>
+            <li><strong>Solution:</strong> End-to-end FastAPI service using LlamaIndex + local Ollama LLMs with document ingestion, vector indexing, and a query API.</li>
+            <li><strong>Impact:</strong> Contribution merged into the main repository, serving as a reference for the community.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">LlamaIndex</span>
+            <span class="stack-pill accent">FastAPI</span>
+            <span class="stack-pill">Ollama</span>
+            <span class="stack-pill">RAG</span>
+            <span class="stack-pill">Local LLMs</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/run-llama/llama_index" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="vision">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
+            <span class="project-year">2025</span>
           </div>
-        </div>
-        <!-- Add here -->
+          <h3 class="project-title">Pneumonia Detector AI</h3>
+          <p class="project-desc">Explainable medical imaging classifier with <strong>GradCAM</strong> visual explanations and a retraining feedback loop.</p>
+          <ul class="project-features">
+            <li>EfficientNet backbone with GradCAM for clinician-trustworthy predictions on chest X-rays.</li>
+            <li>Human-in-the-loop feedback and batch retraining pipeline with quality assurance.</li>
+            <li>Fully Dockerized for reproducible deployment in clinical/research settings.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">PyTorch</span>
+            <span class="stack-pill">EfficientNet</span>
+            <span class="stack-pill">GradCAM</span>
+            <span class="stack-pill">Streamlit</span>
+            <span class="stack-pill">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/Pneumonia-Detector-AI" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="platform">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-title">AutoML Pipeline Service</h3>
+          <p class="project-desc">End-to-end ML platform: <strong>dataset profiling, model selection, versioning, and benchmarking</strong> through a web UI.</p>
+          <ul class="project-features">
+            <li>Streamlit + FastAPI for dynamic training, inference, and result visualization.</li>
+            <li>Automated dataset profiling and model benchmarking with performance logging.</li>
+            <li>Designed for ML teams to standardize experiments and ship models faster.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">FastAPI</span>
+            <span class="stack-pill">Streamlit</span>
+            <span class="stack-pill">scikit-learn</span>
+            <span class="stack-pill">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/AutoML-Pipeline" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="llm">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-title">Finance-domain Small LLM</h3>
+          <p class="project-desc">Fine-tuned <strong>Flan-T5</strong> on curated financial Q&amp;A — shipped as a domain Q&amp;A assistant.</p>
+          <ul class="project-features">
+            <li>Systematic prompt engineering lifted contextual accuracy on finance-specific queries.</li>
+            <li>Deployed for domain-specific Q&amp;A inside a real workflow.</li>
+            <li>Built the data pipeline, training script, and inference service from scratch.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">Hugging Face</span>
+            <span class="stack-pill">Flan-T5</span>
+            <span class="stack-pill">Transformers</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/Finance-LLM" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="vision">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-title">Real-time Object Detection</h3>
+          <p class="project-desc">Live webcam object detection using <strong>MMDetection &amp; RTMDet-tiny</strong> with COCO pre-trained weights.</p>
+          <ul class="project-features">
+            <li>Rendered bounding boxes and class labels on streaming video with low latency.</li>
+            <li>Hands-on work with the MMDetection API for model loading and inference.</li>
+            <li>Foundation for the live-detection feature shipped at Artem HealthTech.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">MMDetection</span>
+            <span class="stack-pill">OpenCV</span>
+            <span class="stack-pill">RTMDet</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/ObjectDetection-RTMDet-tiny" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="vision">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Traffic Sign Recognition</h3>
+          <p class="project-desc">CNN classifier for the GTSRB German traffic-sign dataset with advanced augmentation.</p>
+          <ul class="project-features">
+            <li>OpenCV preprocessing pipeline and data augmentation for model robustness.</li>
+            <li>Trained on TensorFlow + Keras with class-balanced sampling.</li>
+            <li>Foundation project that kicked off the deep-learning journey.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">TensorFlow</span>
+            <span class="stack-pill">Keras</span>
+            <span class="stack-pill">OpenCV</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/TrafficSignRecognition" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card standard reveal" data-cat="platform">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+            </div>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Desktop Voice Assistant</h3>
+          <p class="project-desc">Python voice assistant for reminders, music, web search, and natural-language commands.</p>
+          <ul class="project-features">
+            <li>Speech recognition + TTS for seamless two-way interaction.</li>
+            <li>Enhanced natural-language understanding for smarter command parsing.</li>
+            <li>Early exploration of conversational UX and intent handling.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">SpeechRecognition</span>
+            <span class="stack-pill">pyttsx3</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/twishapatel12/VoiceAssistant" class="project-link primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              View Code
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="work r-p" id="work">
+  <!-- SKILLS (Bento) -->
+  <section id="skills">
     <div class="container">
-      <div class="row mb-4">
-        <div class="col text-center">
-          <h2 class="section-title">Python & AI/ML Projects</h2>
-          <p class="section-desc">Real-world AI, ML & Automation: What I've Built</p>
-        </div>
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Skills</span>
+        <h2 class="h-1">How I build.</h2>
+        <p>Core competencies and the tools I reach for daily.</p>
       </div>
-      <div class="row">
-        <!-- Project: Open Source Contribution – LlamaIndex -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-code-branch text-dark"></i> Open Source Contribution – LlamaIndex
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-dark">Open Source</span>
-                <span class="badge badge-pill badge-secondary">2026</span>
-              </p>
-              <ul>
-                <li>Contributed a <b>FastAPI-based Retrieval-Augmented Generation (RAG)</b> example using <b>LlamaIndex</b> with fully local <b>Ollama LLMs</b>.</li>
-                <li>Implemented document ingestion, vector indexing, and query APIs enabling <b>offline, no-API-key</b> RAG workflows.</li>
-                <li>Collaborated with maintainers to address architecture, formatting, and CI feedback; contribution <b>merged into main repository</b>.</li>
-              </ul>
-              <div class="small text-muted">
-                Tech: Python, LlamaIndex, FastAPI, Ollama, Local LLMs, RAG
-              </div>
-              <a href="https://github.com/run-llama/llama_index" class="btn btn-sm btn-outline-dark mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Repository
-              </a>
-            </div>
+
+      <div class="bento">
+
+        <div class="bento-cell bento-featured reveal">
+          <div class="bento-label">Software Engineering</div>
+          <h3 class="bento-title">System Design &amp; APIs</h3>
+          <p class="bento-desc">Designing, building, and operating scalable backend systems that survive production traffic. From REST APIs and async pipelines to authentication, observability, and data integrity.</p>
+          <div class="bento-tags">
+            <span class="bento-tag">Python</span>
+            <span class="bento-tag accent">FastAPI</span>
+            <span class="bento-tag">REST APIs</span>
+            <span class="bento-tag">System Design</span>
+            <span class="bento-tag">Scalable Services</span>
+            <span class="bento-tag">PostgreSQL</span>
+            <span class="bento-tag">Docker</span>
+            <span class="bento-tag">CI/CD</span>
           </div>
         </div>
 
-        <!-- Project: Pneumonia Detector AI -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-x-ray text-danger"></i> Pneumonia Detector AI
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-danger">Medical Imaging</span>
-                <span class="badge badge-pill badge-secondary">2025</span>
-              </p>
-              <ul>
-                <li>Developed an explainable medical AI web app for automated pneumonia detection on chest X-rays, leveraging <b>EfficientNet and GradCAM</b> for visual model transparency and user trust.
-                <li>Implemented a human-in-the-loop feedback and retraining pipeline with batch processing, quality assurance, and full <b>Dockerization</b> for reproducible deployment in clinical or research environments.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, PyTorch, EfficientNet, Streamlit, GradCAM, Docker</div>
-              <a href="https://github.com/twishapatel12/Pneumonia-Detector-AI" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+        <div class="bento-cell bento-side reveal">
+          <div class="bento-label">Healthcare Tech</div>
+          <h3 class="bento-title">Healthcare Integrations</h3>
+          <p class="bento-desc">Lab integration software, HMIS reporting, and clinical data exchange built for healthcare workflows.</p>
+          <div class="bento-tags">
+            <span class="bento-tag accent">Lab Integration</span>
+            <span class="bento-tag">HL7</span>
+            <span class="bento-tag">HMIS Portal</span>
+            <span class="bento-tag">Clinical Pipelines</span>
           </div>
         </div>
 
-        <!-- Project: AutoML Pipeline Service -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-robot text-info"></i> AutoML Pipeline Service
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-info">AI Automation</span>
-                <span class="badge badge-pill badge-secondary">2025</span>
-              </p>
-              <ul>
-                <li>Designed an end-to-end pipeline using <b>Streamlit & FastAPI</b> for dynamic model training, inference, and benchmarking.</li>
-                <li>Automated dataset profiling, model selection, versioning, and performance logging.</li>
-                <li>Web interface for configuration, easy deployment & result visualization.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, Streamlit, FastAPI, scikit-learn, Docker</div>
-              <a href="https://github.com/twishapatel12/AutoML-Pipeline" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+        <div class="bento-cell reveal">
+          <div class="bento-label">Analytics</div>
+          <h3 class="bento-title">Data &amp; BI</h3>
+          <p class="bento-desc">Dashboards and reporting on real operational data.</p>
+          <div class="bento-tags">
+            <span class="bento-tag accent">Apache Superset</span>
+            <span class="bento-tag">Data Viz</span>
+            <span class="bento-tag">Reporting</span>
+            <span class="bento-tag">ETL</span>
           </div>
         </div>
-        <!-- Project: Object Detection with MMDetection RTMDet-tiny -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-eye text-warning"></i> Object Detection
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-warning">Computer Vision</span>
-                <span class="badge badge-pill badge-secondary">2025</span>
-              </p>
-              <ul>
-                <li>Implemented real-time object detection with <b>MMDetection & OpenCV</b> on live webcam feeds.</li>
-                <li>Displayed bounding boxes & class labels with <b>pretrained COCO weights</b>.</li>
-                <li>Hands-on with MMDetection API, model inference & live result rendering.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, MMDetection, OpenCV</div>
-              <a href="https://github.com/twishapatel12/ObjectDetection-RTMDet-tiny" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+
+        <div class="bento-cell reveal">
+          <div class="bento-label">Databases</div>
+          <h3 class="bento-title">Data Layer</h3>
+          <p class="bento-desc">Modeling schemas, writing efficient queries, and shaping data for analysis and reporting.</p>
+          <div class="bento-tags">
+            <span class="bento-tag accent">PostgreSQL</span>
+            <span class="bento-tag">MySQL</span>
+            <span class="bento-tag">Pandas</span>
+            <span class="bento-tag">NumPy</span>
           </div>
         </div>
-        <!-- Project: Traffic Sign Recognition -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-traffic-light text-success"></i> Traffic Sign Recognition
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-success">Deep Learning</span>
-                <span class="badge badge-pill badge-secondary">2023</span>
-              </p>
-              <ul>
-                <li>Developed a <b>CNN model</b> to classify German traffic signs with high accuracy.</li>
-                <li>Advanced preprocessing & augmentation with OpenCV for model robustness.</li>
-                <li>Built with TensorFlow & Keras, leveraging GTSRB dataset.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, TensorFlow, OpenCV, Keras</div>
-              <a href="https://github.com/twishapatel12/TrafficSignRecognition" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+
+        <div class="bento-cell reveal">
+          <div class="bento-label">AI / ML</div>
+          <h3 class="bento-title">LLM Systems</h3>
+          <p class="bento-desc">From research notebooks to LLM-powered applications.</p>
+          <div class="bento-tags">
+            <span class="bento-tag">PyTorch</span>
+            <span class="bento-tag">Hugging Face</span>
+            <span class="bento-tag">LangChain</span>
+            <span class="bento-tag">LlamaIndex</span>
+            <span class="bento-tag">RAG</span>
           </div>
         </div>
-        <!-- Project: Finance-based Small LLM -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-coins text-primary"></i> Finance-based Small LLM
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-primary">NLP/LLMs</span>
-                <span class="badge badge-pill badge-secondary">2025</span>
-              </p>
-              <ul>
-                <li>Fine-tuned <b>Flan-T5</b> LLM on curated financial Q&A datasets.</li>
-                <li>Optimized prompt engineering for precision & contextual relevance.</li>
-                <li>Deployed model for domain-specific finance Q&A.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, Hugging Face, Flan-T5, Transformers</div>
-              <a href="https://github.com/twishapatel12/Finance-LLM" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+
+        <div class="bento-cell reveal">
+          <div class="bento-label">Frontend</div>
+          <h3 class="bento-title">Web &amp; UI</h3>
+          <p class="bento-desc">Building responsive, accessible interfaces that translate backend complexity into clean user experiences.</p>
+          <div class="bento-tags">
+            <span class="bento-tag">JavaScript</span>
+            <span class="bento-tag">React</span>
+            <span class="bento-tag">HTML5</span>
+            <span class="bento-tag">CSS3</span>
           </div>
         </div>
-        <!-- Project: Voice Assistant -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow-lg border-0">
-            <div class="card-body">
-              <h4 class="card-title mb-2">
-                <i class="fas fa-microphone text-danger"></i> Voice Assistant
-              </h4>
-              <p class="mb-1">
-                <span class="badge badge-pill badge-danger">Speech AI</span>
-                <span class="badge badge-pill badge-secondary">2023</span>
-              </p>
-              <ul>
-                <li>Developed a desktop voice assistant in Python for reminders, music, web search & more.</li>
-                <li>Integrated speech recognition and TTS for seamless two-way interaction.</li>
-                <li>Enhanced natural language understanding for smarter commands.</li>
-              </ul>
-              <div class="small text-muted">Tech: Python, SpeechRecognition, pyttsx3</div>
-              <a href="https://github.com/twishapatel12/VoiceAssistant" class="btn btn-sm btn-outline-primary mt-2" target="_blank">
-                <i class="fab fa-github"></i> View Code
-              </a>
-            </div>
+
+        <div class="bento-cell reveal">
+          <div class="bento-label">DevOps / Cloud</div>
+          <h3 class="bento-title">Ship &amp; Run</h3>
+          <p class="bento-desc">Containerized, reproducible, observable.</p>
+          <div class="bento-tags">
+            <span class="bento-tag">Docker</span>
+            <span class="bento-tag">Git &amp; GitHub</span>
+            <span class="bento-tag">Linux</span>
+            <span class="bento-tag">CI/CD</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact r-p section-offset" id="contact">
+  <!-- TECH STACK -->
+  <section id="stack">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-desc">Interested in working together or just want to connect? Reach out anytime.</p>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="contact-card shadow-sm">
-            <div class="contact-icon-box"><i class="fa fa-phone"></i></div>
-            <div class="contact-label">Phone</div>
-            <a href="tel:+918160893358" class="contact-link">+91 8160893358</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="contact-card shadow-sm">
-            <div class="contact-icon-box"><i class="far fa-envelope"></i></div>
-            <div class="contact-label">Email</div>
-            <a href="mailto:twishap534@gmail.com" class="contact-link">twishap534@gmail.com</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="contact-card shadow-sm">
-            <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-label">Location</div>
-            <span class="contact-link">Ahmedabad, Gujarat, India</span>
-          </div>
-        </div>
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Stack</span>
+        <h2 class="h-1">Tools I reach for.</h2>
+        <p>Categorized by proficiency — expert, advanced, working knowledge.</p>
       </div>
-      <div class="contact-social mt-4 text-center">
-        <a href="https://github.com/twishapatel12" class="contact-social-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" class="contact-social-icon" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:twishap534@gmail.com" class="contact-social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+      <div class="techcloud reveal">
+        <span class="tech-pill" data-level="expert"><span class="dot"></span>Python</span>
+        <span class="tech-pill" data-level="expert"><span class="dot"></span>FastAPI</span>
+        <span class="tech-pill" data-level="expert"><span class="dot"></span>PyTorch</span>
+        <span class="tech-pill" data-level="expert"><span class="dot"></span>TensorFlow</span>
+        <span class="tech-pill" data-level="expert"><span class="dot"></span>PostgreSQL</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Apache Superset</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Docker</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>REST APIs</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>OpenCV</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Hugging Face</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Transformers</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>LangChain</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>LlamaIndex</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Healthcare Integrations</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>MySQL</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>JavaScript</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>React</span>
+        <span class="tech-pill" data-level="advanced"><span class="dot"></span>Git &amp; GitHub</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>System Design</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>Data Analytics</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>TypeScript</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>Node.js</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>MMDetection</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>Flan-T5</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>Streamlit</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>scikit-learn</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>Pandas</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>NumPy</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>SQL</span>
+        <span class="tech-pill" data-level="intermediate"><span class="dot"></span>HTML5 / CSS3</span>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container d-flex flex-column align-items-center justify-content-center">
-      <div class="footer-name mb-2">Twisha Patel</div>
-      <div class="footer-role mb-1">AI/ML Engineer &mdash; Portfolio</div>
-      <div class="footer-motto mb-2">"Building intelligent solutions, one model at a time."</div>
-      <div class="footer-text">
-        &copy; <span id="footer-year"></span> Twisha Patel
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Education</span>
+        <h2 class="h-1">Academic foundation.</h2>
+        <p>Continuous learning — formal degrees and ongoing specializations.</p>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card highlight reveal">
+          <div class="edu-head">
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="edu-period">Dec 2025 – Jun 2026</span>
+          </div>
+          <div class="edu-degree">Advanced Post Graduate</div>
+          <div class="edu-field">Agentic AI Workflows &amp; Agentic System Development</div>
+          <div class="edu-school">Indian Institute of Technology, Madras</div>
+          <div class="edu-meta">
+            <span class="badge accent">Ongoing</span>
+            <span>Specialization · Agentic AI</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-head">
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span class="edu-period">Aug 2021 – May 2025</span>
+          </div>
+          <div class="edu-degree">Bachelor of Technology</div>
+          <div class="edu-field">Computer Science Engineering</div>
+          <div class="edu-school">ITM (SLS) Baroda University</div>
+          <div class="edu-meta">
+            <span class="badge accent">CGPA 8.6</span>
+            <span>4-year degree</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-head">
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 4l9 5.5M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/><path d="M9 21V13h6v8"/></svg>
+            </div>
+            <span class="edu-period">2020 – 2021</span>
+          </div>
+          <div class="edu-degree">Higher Secondary (XII)</div>
+          <div class="edu-field">Science Stream</div>
+          <div class="edu-school">Shri J.R. Shah Bright Eng. Medium School</div>
+          <div class="edu-meta">
+            <span class="badge">Grade B2</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-head">
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <span class="edu-period">2019 – 2020</span>
+          </div>
+          <div class="edu-degree">Secondary (X)</div>
+          <div class="edu-field">Foundation</div>
+          <div class="edu-school">Bright Day School</div>
+          <div class="edu-meta">
+            <span class="badge">Grade B1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-glow"></div>
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-cta reveal">Let's build something</div>
+        <h2 class="reveal">Have an idea? <span class="accent-text">Let's ship it.</span></h2>
+        <p class="reveal">Open to full-time Software Engineer and AI/ML roles, healthcare technology and data platform work, and research collaborations. The fastest way to reach me is email — I reply within 24 hours.</p>
+        <div class="contact-buttons reveal">
+          <a href="mailto:twishap534@gmail.com" class="btn btn-primary btn-lg magnetic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            <span>twishap534@gmail.com</span>
+          </a>
+          <a href="docs/TwishaPatel_Resume.pdf" class="btn btn-secondary btn-lg magnetic" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+        <div class="contact-channels reveal stagger">
+          <a href="mailto:twishap534@gmail.com" class="channel">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            </div>
+            <div class="channel-info">
+              <div class="channel-label">Email</div>
+              <div class="channel-value">twishap534@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://github.com/twishapatel12" target="_blank" rel="noopener" class="channel">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            </div>
+            <div class="channel-info">
+              <div class="channel-label">GitHub</div>
+              <div class="channel-value">@twishapatel12</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" target="_blank" rel="noopener" class="channel">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+            </div>
+            <div class="channel-info">
+              <div class="channel-label">LinkedIn</div>
+              <div class="channel-value">Twisha Patel</div>
+            </div>
+          </a>
+          <a href="tel:+918160893358" class="channel">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="channel-info">
+              <div class="channel-label">Phone</div>
+              <div class="channel-value">+91 81608 93358</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="siteFooter">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Twisha Patel" class="footer-brand-logo" />
+          <span>Twisha Patel · Software Engineer</span>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/twishapatel12" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/twisha-patel-253bbb229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="mailto:twishap534@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+        </div>
+        <div class="footer-built">© <span id="footer-year"></span> · Building intelligent solutions, one model at a time.</div>
       </div>
     </div>
   </footer>
-  
-  <script>
-    document.getElementById("footer-year").textContent = new Date().getFullYear();
-  </script>
 
-  <script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var preloader = document.getElementById('preloader');
-      if(preloader) preloader.classList.add('hide');
-    }, 400);
-  });
-</script>
+  <!-- Command palette -->
+  <div class="cmdk-overlay" id="cmdkOverlay" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="cmdk">
+      <div class="cmdk-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" class="cmdk-input" id="cmdkInput" placeholder="Search projects, sections, or actions…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="search" enterkeyhint="search" />
+        <span class="kbd">ESC</span>
+      </div>
+      <div class="cmdk-results" id="cmdkResults">
+        <!-- Populated by JS -->
+      </div>
+      <div class="cmdk-footer">
+        <span><span class="kbd">↑</span> <span class="kbd">↓</span> Navigate</span>
+        <span><span class="kbd">↵</span> Select</span>
+        <span><span class="kbd">ESC</span> Close</span>
+      </div>
+    </div>
+  </div>
 
-  <script src="lib/jquery-3.3.1.min.js"></script>
-  <script src="lib/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/typed.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
